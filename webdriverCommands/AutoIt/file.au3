@@ -1,3 +1,3 @@
 ControlFocus("Open","","Edit1")
 ControlSetText("Open","","Edit1","D:\education\webdriver\Locators.txt")
-ControlClick("Open","","Button1")
+ControlClick("Open","","Butt  on1")
