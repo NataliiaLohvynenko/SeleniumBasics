@@ -1,0 +1,3 @@
+test -DsuiteXMLFile=src/test/..../regression.xml
+
+java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* org.testng.TestNG book-flight-module.xml

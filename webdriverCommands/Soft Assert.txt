@@ -1,0 +1,6 @@
+SoftAssert softAssert = new SoftAssert();
+
+softAssert.assertTrue(element.isDisplayed);
+
+softAssert.AssertAll;
+

@@ -1,0 +1,20 @@
+
+Get();
+---------Load a new web page in the current browser window.
+getCurentURl();
+-------Get a string representing the current URL that the browser is looking at.
+getTitle()
+------The title of the current page
+getPageSource()
+------Get the source of the last loaded page.
+Quit();
+------Quits this driver, closing every associated window.
+Close();
+------Close the current window, quitting the browser if it's the last window currently open.
+Navigate().back 
+------Goto prev page
+
+koszyk.sendKeys(Keys.ENTER);
+-------sent keys
+
+

@@ -1,0 +1,4 @@
+15:46:11.288 [main] ERROR LogForJ - testError
+15:46:11.300 [main] DEBUG LogForJ - TestDebug
+15:46:11.300 [main] FATAL LogForJ - TestFatal
+15:46:11.301 [main] INFO  LogForJ - testInfo

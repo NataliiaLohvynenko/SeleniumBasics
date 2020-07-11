@@ -1,0 +1,31 @@
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String text = (String) js.executeScript("return document.getElementById(\"fromPlaceName\").value;");
+
+String URL = "http://" + username + ":" + myPassword + "@" + URL;
+driver.get(URL);
+Alert alert = driver.switchTo().alert();
+alert.accept();
+
+
+----------------------------------------------------------------
+       WebElement e = driver.findElement(By.xpath("//div[7]//div[1]//h2[1]//a[1]"));
+       // js.executeScript("alert('Hello World!');");
+
+       // js.executeScript("arguments[0].scrollIntoView(true);",e);
+        js.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });",e);
+
+------------------------------------------------------------------------------
+
+	js.executeScript(arguments[0].innerHTML - 'Hello world', e)
+
+-------------------------------------------------------------------------------
+
+	js.excecute("window.scrollTo(0. document.body.scrollHeght)")
+
+-------------------------------------------------------------------------------
+
+	js.excecute("window.scrollBy(xnum,ynum)");
+
+-------------------------------------------------------------------------------
+
+	js.excecute("window.scrollBy(0,0)");

@@ -1,0 +1,63 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class chromebrowser {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//chromedriver.exe
+System.setProperty("webdriver.chrome.driver", "C://work//chromedriver.exe");
+		
+WebDriver driver =new ChromeDriver();
+driver.get("http://facebook.com"); //URL in the browser
+//driver.findElement(By.className("inputtext")).sendKeys("helloworld");
+/*driver.findElement(By.id("email")).sendKeys("Thisis my first code");
+driver.findElement(By.name("pass")).sendKeys("123456");
+driver.findElement(By.linkText("Forgot account?")).click();*/
+
+driver.findElement(By.cssSelector("#email")).sendKeys("emailaddress");
+driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("password");
+driver.findElement(By.xpath("//*[@id='login_form']/table/tbody/tr[3]/td[2]/div/a")).click();
+
+//.//tagName[@attribute=‘value’]  
+
+$("") - for css ,    $x("")   or xpath
+//tagName[@attribute='value']  - xpath syntax
+tagName[attribute='value']  -CSS  tagName#id- CSS   tagname.classname- CSS
+//tagName[contains(@attribute,'value')]  - xpath regular expression
+tagName[Atrribute*='value'] - Css regular expression
+
+ How to traverse to sibling element using xpath?
+.//*[@id='tablist1-tab1']/following-sibling::li[2]
+How to traverse back to Parent element from Child element using Xpath?
+.//*[@id='tablist1-tab1']/parent::ul	
+ How to identify element with Text based?
+//*[text()='']
+
+
+String value=table.findElements(By.cssSelector("div[class='cb-col cb-col-100 cb-scrd-itms'] div:nth-child(3)")).get(i).getText();
+		int valueinteger=  Integer.parseInt(value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}

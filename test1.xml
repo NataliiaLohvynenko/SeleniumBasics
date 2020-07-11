@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="search-module">
+
+
+<listeners>
+    <listener class-name="CardPageTest.Listener"/>
+</listeners>
+    <test name="goocle">
+        <parameter name="coupon" value="rahulsheetyacademy"></parameter>
+        <classes >
+            <class name="CardPageTest.AddBtn">
+            </class>
+        </classes>
+
+    </test>
+
+</suite>

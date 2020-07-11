@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "courseName": "Appium",
+      "purchasedDete": "2020-06-28",
+      "amount": 99,
+      "Location": "Asia"
+    },
+    {
+      "courseNacustomerInfo.jsonme": "Jmeter",
+      "purchasedDete": "2020-06-28",
+      "amount": 120,
+      "Location": "Asia"
+    },
+    {
+      "courseName": "WebServices",
+      "purchasedDete": "2020-06-28",
+      "amount": 21,
+      "Location": "Asia"
+    }
+  ]
+}

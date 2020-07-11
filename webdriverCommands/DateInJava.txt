@@ -1,0 +1,5 @@
+private String getTime(){
+SimpledateFormat formatter = New SimpleDateFormat("MMddyyyyHHmmss");
+Date date = new date();
+return formatter.format(date);
+}

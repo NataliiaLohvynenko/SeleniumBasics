@@ -1,0 +1,7 @@
+drivet.manage().addCoocie(cookie);
+Coocie cookie = new Cookie(name, value, domain, path,expiry);
+
+driver.manage().deleteAllCookies();
+driver.manage().deleteCookieNamed(name);
+driver.manage().getCookies();
+driver.manage().getCookieNamed(name). getValue();

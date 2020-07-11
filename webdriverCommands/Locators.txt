@@ -1,0 +1,8 @@
+- Id
+- ClassName
+- Name
+- TagName
+- LinkText
+- PartialLinkTe
+- Xpath
+- Css

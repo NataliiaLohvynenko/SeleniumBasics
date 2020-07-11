@@ -1,0 +1,17 @@
+C:\Program Files (x86)\AutoIt3\SciTE - create steps
+C:\Program Files (x86)\AutoIt3\Au3Info - spy on element
+
+save file
+compile 
+run
+
+  @Test
+    public void AutoItTest() throws InterruptedException, IOException {
+        driver.get("https://avepdf.com/en/text-to-pdf?gclid=CjwKCAjwlZf3BRABEiwA8Q0qqyb_ywRtpgec_Jr5laSuSaMTJOa0FN0cYW_6WXcBlJhQzr3JAE1pQhoCz10QAvD_BwE");
+
+        driver.findElement(By.xpath("//li[1]//div[2]//button[1]//div[1]//span[1]//*[local-name()='svg']//*[name()='path' and contains(@d,'M26 29l6-1')]")).click();
+        //(By.partialLinkText("Choose")).click();
+        Thread.sleep(5000);
+        Runtime.getRuntime().exec("D:\\education\\webdriver\\AutoIt\\file.exe");
+
+    }

@@ -1,0 +1,78 @@
+package basics;
+
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class qw {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+
+
+
+//Desired capabilities=
+//general chrome profile
+DesiredCapabilities dc=DesiredCapabilities.chrome();
+//dc.acceptInsecureCerts();
+dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+
+String downloadPath=System.getProperty("user.dir");
+HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+
+chromePrefs.put("profile.default_content_settings.popups", 0);
+
+chromePrefs.put("download.default_directory", downloadPath);
+ChromeOptions o= new ChromeOptions();
+o.setExperimentalOption("prefs", chromePrefs);
+o.addArguments("headless");
+o.merge(dc);
+o.set.ExperimentalOption("prefs","");
+System.setProperty("webdriver.chrome.driver", "");
+WebDriver driver=new ChromeDriver(o);
+
+File f=new File(downloadPath+"/converted.zip");
+
+if(f.exists())
+
+{
+
+Assert.assertTrue(f.exists());
+
+if(f.delete())
+
+System.out.println("file deleted");
+
+}
+
+
+
+
+
+
+}
+
+}
+
+public void setupDriver(ITestContext ctx) throws MalformedURLException {
+        String host = "localhost";
+        DesiredCapabilities dc;
+        if(System.getProperty("BROWSER")!= null &&
+                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
+            dc = DesiredCapabilities.firefox();
+        }else{
+            dc = DesiredCapabilities.chrome();
+        }
+
+        if(System.getProperty("HUB_HOST")!= null){
+            host = System.getProperty("HUB_HOST");
+        }
+
+        String testName = ctx.getCurrentXmlTest().getName();
+        String completeUrl  = "http://" + host + ":4444/wd/hub";
+        dc.setCapability("name", testName);
+        this.driver= new RemoteWebDriver(new URL(completeUrl), dc);
